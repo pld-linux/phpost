@@ -11,7 +11,7 @@ Requires:	php
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_phpostdir	/home/httpd/html/%{name}
+%define		_phpostdir	/home/services/httpd/html/%{name}
 
 %description
 PHPost is a free PHP4 program that implements a POP mail client. It is
