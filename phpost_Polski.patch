@@ -1,0 +1,88 @@
+--- phpost_Polski.inc	Mon Jun 11 18:14:16 2001
++++ phpost_Polski.inc.new	Wed Feb 20 22:42:29 2002
+@@ -1,44 +1,46 @@
+ <?
+-   // Polish language translation provided by Derk Galon (office@webmax.bc.ca)
+-   // * Checked and corrected by Adrian Wieczorek (adi@blink.pl)
+-
+    $lang["locale"] = "pl";
+-   $lang["charset"] = "ISO-8859-2";
++   $lang["charset"] = "iso-8859-2";
+    $lang["datefmt"] = "%d-%b-%Y";
+ 
+    $lang["username"] ="U¿ytkownik";
+    $lang["password"] = "Has³o";
+-   $lang["popserver"] = "Serwer POP3";
++   $lang["popserver"] = "POP Server";
+ 
+    $lang["list"] = "Wszystkie";
+    $lang["compose"] = "Nowa wiadomo¶æ";
+    $lang["config"] = "Opcje";
+-   $lang["reply"] = "Odpowiedz";
++   $lang["abook"] = "Ksi±¿ka adresowa";
++   $lang["reply"] = "Odpowied¼";
+    $lang["forward"] = "Prze¶lij dalej";
+-   $lang["previous"] = "Poprzedni";
++   $lang["previous"] = "Poprzedni"; 
+    $lang["next"] = "Nastêpny";
+    $lang["delete"] = "Usuñ";
+    $lang["login"] = "Zaloguj";
+    $lang["logout"] = "Zakoñcz";
++   $lang["alias"] = "Alias";
++   $lang["alist"] = "Lista aliasów";
++   $lang["aupdate"] = "Dodaj/Zaktualizuj Alias";
++   $lang["adelete"] = "Usuñ Alias";
+ 
+    $lang["page"] = "Wybierz stronê";
+    $lang["delmsgs"] = "Usuñ zaznaczone wiadomo¶ci";
+-   $lang["total"] = "Masz %d wiadomo¶ci o rozmiarze %s";
++   $lang["total"] = "Masz %d wiadomo¶(c/ci) o rozmiarze %s";
+ 
+-   $lang["number"] = "Lp";
++   $lang["number"] = "Lp.";
+    $lang["from"] = "Od";
+    $lang["to"] = "Do";
+    $lang["cc"] = "DW";
+    $lang["bcc"] = "UDW";
+    $lang["subject"] = "Temat";
+-   $lang["date"] = "Otrzymano";
++   $lang["date"] = "Data";
+    $lang["size"] = "Rozmiar";
+    $lang["message"] = "Wiadomo¶æ";
+    $lang["send"] = "Wy¶lij wiadomo¶æ";
+    $lang["reset"] = "Zresetuj";
+    $lang["encoding"] = "U¿yj %s by zakodowaæ za³±cznik:";
+-   $lang["sendhtml"] = "Wys³aæ wiadomo¶æ w HTML-u?";
+-   $lang["ccself"] = "Kopia wiadomo¶ci dla siebie?";
++   $lang["sendhtml"] = "Wys³aæ jako HTML?";
++   $lang["ccself"] = "Kopia wiadomo¶ci do siebie?";
+ 
+    $lang["showheaders"] = "Poka¿ nag³ówki wiadomo¶ci";
+    $lang["hideheaders"] = "Ukryj nag³ówki wiadomo¶ci";
+@@ -46,19 +48,20 @@
+ 
+    $lang["fullname"] = "Imiê i nazwisko";
+    $lang["replyaddress"] = "Adres zwrotny (Reply-To)";
+-   $lang["signature"] = "Twój Podpis (do³±czany do ka¿dej wiadomo¶ci)";
++   $lang["signature"] = "Twój podpis (do³±czany do ka¿dej wiadomo¶ci)";
+    $lang["language"] = "Jêzyk";
+    $lang["maxattachments"] = "Max. liczba za³±czników";
+    $lang["pagelength"] = "Ilo¶æ wiadomo¶ci na stronie";
+-   $lang["renderhtml"] = "Wy¶wietl wiadomo¶ci w HTML";
+-   $lang["renderimages"] = "Poka¿ za³±czon± grafikê w tek¶cie wiadomo¶ci";
++   $lang["renderhtml"] = "Wy¶wietl wiadomo¶ci w HTMLu";
++   $lang["renderimages"] = "Poka¿ zal±czon± grafikê w tek¶cie wiadomo¶ci";
+    $lang["saveconfig"] = "  Zapisz zmiany  ";
+ 
+    $lang["empty"] = "Skrzynka odbiorcza jest pusta";
+    $lang["configsaved"] = "Opcje zosta³y zapisane pomy¶lnie!";
+    $lang["messagesent"] = "Wiadomo¶æ zosta³a wys³ana pomy¶lnie!";
+    $lang["nodelete"] = "Status skrzynki zosta³ zmieniony, ale wiadomo¶æ nie zosta³a usuniêta!";
+-   $lang["deletedmsgs"] = "%d wiadomo¶ci zosta³o usuniêtych pomy¶lnie!";
+-   $lang["error"] = "B³±d: %s!";
+-   $lang["mimecomment"] = "Wiadomo¶c zosta³a zakodowana w formacie MIME. Twój program pocztowy nie rozpozna³ tego formatu - czê¶æ lub ca³o¶æ wiadomo¶ci mo¿e zostaæ wy¶wietlona nieprawid³owo";
++   $lang["deletedmsgs"] = "%d wiadomo¶(æ/ci) zosta³o usuniêtych pomy¶lnie!";
++   $lang["error"] = "B³±d: %s";
++
++   $lang["mimecomment"] = "Wiadomo¶c zosta³a zakodowana w formacie MIME. Twój program pocztowy nie rozozna³ tego formatu - czê¶æ lub ca³o¶æ wiadomo¶ci mo¿e zostaæ wy¶wietlona nieprawid³owo";
+ ?>
