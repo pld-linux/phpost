@@ -8,6 +8,8 @@ Group:		Networking/Utilities
 Source0:	http://webgadgets.com/phpost/%{name}.tar.gz
 Patch0:		%{name}_Polski.patch
 Requires:	php
+Requires:	php-pcre
+Requires:	php-pear
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
