@@ -5,11 +5,21 @@ Version:	1.07
 Release:	1
 License:	GPL
 Group:		Networking/Utilities
-Group(de):	Netzwerkwesen/Werkzeuge
+Group(cs):	Sí»ové/Utility
+Group(da):	Netværks/Værktøj
+Group(de):	Netzwerkwesen/Dienstprogramme
 Group(es):	Red/Utilitarios
+Group(fr):	Réseau/Utilitaires
+Group(is):	Net/Tól
+Group(it):	Rete/Utility
+Group(no):	Nettverks/Verktøy
 Group(pl):	Sieciowe/Narzêdzia
 Group(pt_BR):	Rede/Utilitários
-Source0:	http://webgadgets.com/phpost/phpost-1.07.tar.gz
+Group(pt):	Rede/Utilidades
+Group(ru):	óÅÔÅ×ÙÅ/ðÒÉÌÏÖÅÎÉÑ
+Group(sl):	Omre¾ni/Pripomoèki
+Group(sv):	Nätverk/Verktyg
+Source0:	http://webgadgets.com/phpost/%{name}-%{version}.tar.gz
 Patch0:		%{name}_Polski.patch
 Requires:	php
 BuildArch:	noarch
@@ -18,21 +28,22 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		_phpostdir	/home/httpd/html/%{name}
 
 %description
-PHPost is a free PHP4 program that implements a POP mail client.  It is
-designed to work with any standard POP and SMTP server (for receiving and
-sending mail respectively).  It is simple and straight-forward, it doesn't
-rely on any PHP add-ons or optional modules (although it will use certain
-ones if they are available)
+PHPost is a free PHP4 program that implements a POP mail client. It is
+designed to work with any standard POP and SMTP server (for receiving
+and sending mail respectively). It is simple and straight-forward, it
+doesn't rely on any PHP add-ons or optional modules (although it will
+use certain ones if they are available)
 
 %description -l pl
-Jest to darmowy klinet POP'a napisany w PHP4. Jest przeznaczony do pracy ze
-standartowymi serwerami POP oraz SMTP.
+Jest to darmowy klient POP napisany w PHP4. Jest przeznaczony do pracy
+ze standardowymi serwerami POP oraz SMTP.
 
 %prep
 %setup -q -c
 %patch0 -p0
 
 %install
+rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_phpostdir}/%{name}_{cache,prefs,temp}
 
 install *.{gif,php,css,inc} $RPM_BUILD_ROOT%{_phpostdir}
@@ -47,9 +58,9 @@ gzip -9nf CHANGES README TODO
 rm -rf $RPM_BUILD_ROOT
 
 %files
-%defattr(640,root,http,755)
+%defattr(644,root,root,755)
 %doc *.gz
-%dir  %{_phpostdir}
+%dir %{_phpostdir}
 %attr(770,root,http) %{_phpostdir}/%{name}_cache
 %attr(770,root,http) %{_phpostdir}/%{name}_prefs
 %attr(770,root,http) %{_phpostdir}/%{name}_temp
