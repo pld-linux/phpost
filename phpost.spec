@@ -15,7 +15,7 @@ Requires:	php
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_phpostdir	/home/httpd/html/%{name}/
+%define		_phpostdir	/home/httpd/html/%{name}
 
 %description
 PHPost is a free PHP4 program that implements a POP mail client.  It is
@@ -29,35 +29,31 @@ Jest to darmowy klinet POP'a napisany w PHP4. Jest przeznaczony do pracy ze
 standartowymi serwerami POP oraz SMTP.
 
 %prep
-%setup -q -c -n %{name}-%{version}
+%setup -q -c
 %patch0 -p0
 
-%build
-
 %install
-install -d $RPM_BUILD_ROOT%{_phpostdir}/{%{name}_cache,%{name}_prefs,%{name}_temp}
-cp *.{gif,php,css,inc} $RPM_BUILD_ROOT%{_phpostdir}
-cp %{name}_cache/.htaccess $RPM_BUILD_ROOT%{_phpostdir}%{name}_cache/
-cp %{name}_prefs/.htaccess $RPM_BUILD_ROOT%{_phpostdir}%{name}_prefs/
+install -d $RPM_BUILD_ROOT%{_phpostdir}/%{name}_{cache,prefs,temp}
+
+install *.{gif,php,css,inc} $RPM_BUILD_ROOT%{_phpostdir}
+install %{name}_cache/.htaccess $RPM_BUILD_ROOT%{_phpostdir}/%{name}_cache/
+install %{name}_prefs/.htaccess $RPM_BUILD_ROOT%{_phpostdir}/%{name}_prefs/
+
 ln -sf %{name}.php $RPM_BUILD_ROOT%{_phpostdir}index.php
 
-gzip -9nf {CHANGES,LICENSE,README,TODO}
+gzip -9nf CHANGES README TODO
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post
-echo ""
-echo "Don't forget to edit /home/httpd/html/phpost/phpost.inc !"
-
 %files
 %defattr(640,root,http,755)
-%attr(770,root,http)%{_phpostdir}%{name}_cache
-%attr(770,root,http)%{_phpostdir}%{name}_prefs
-%attr(770,root,http)%{_phpostdir}%{name}_temp
-%attr(644,root,http)%{_phpostdir}*.gif
-%attr(644,root,http)%{_phpostdir}*.inc
-%attr(644,root,http)%{_phpostdir}*.css
-%attr(644,root,http)%{_phpostdir}*.php
-
 %doc *.gz
+%dir  %{_phpostdir}
+%attr(770,root,http) %{_phpostdir}/%{name}_cache
+%attr(770,root,http) %{_phpostdir}/%{name}_prefs
+%attr(770,root,http) %{_phpostdir}/%{name}_temp
+%{_phpostdir}/*.gif
+%{_phpostdir}/*.inc
+%{_phpostdir}/*.css
+%{_phpostdir}/*.php
