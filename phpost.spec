@@ -6,6 +6,7 @@ Release:	1.beta
 License:	GPL
 Group:		Networking/Utilities
 Source0:	http://webgadgets.com/phpost/%{name}.tar.gz
+# Source0-md5:	a5cbec332c1d55296d0b84f48e9715b5
 Patch0:		%{name}_Polski.patch
 Requires:	php
 Requires:	php-pcre
