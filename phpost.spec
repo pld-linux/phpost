@@ -36,7 +36,7 @@ install *.{gif,php,css,inc} $RPM_BUILD_ROOT%{_phpostdir}
 install %{name}_cache/.htaccess $RPM_BUILD_ROOT%{_phpostdir}/%{name}_cache/
 install %{name}_prefs/.htaccess $RPM_BUILD_ROOT%{_phpostdir}/%{name}_prefs/
 
-ln -sf %{name}.php $RPM_BUILD_ROOT%{_phpostdir}index.php
+ln -sf %{name}.php $RPM_BUILD_ROOT%{_phpostdir}/index.php
 
 gzip -9nf CHANGES README TODO
 
