@@ -1,8 +1,8 @@
 Summary:	A web based POP mail client written in PHP4
 Summary(pl):	Klient POP przez WWW, napisany w PHP4
 Name:		phpost
-Version:	1.10beta
-Release:	1
+Version:	1.10
+Release:	1.beta
 License:	GPL
 Group:		Networking/Utilities
 Source0:	http://webgadgets.com/phpost/%{name}.tar.gz
