@@ -1,8 +1,8 @@
 Summary:	A web based POP mail client written in PHP4
 Summary(pl):	Klient POP przez WWW, napisany w PHP4
 Name:		phpost
-Version:	1.07
-Release:	2
+Version:	1.08
+Release:	1
 License:	GPL
 Group:		Networking/Utilities
 Source0:	http://webgadgets.com/phpost/%{name}-%{version}.tar.gz
@@ -38,14 +38,12 @@ install %{name}_prefs/.htaccess $RPM_BUILD_ROOT%{_phpostdir}/%{name}_prefs/
 
 ln -sf %{name}.php $RPM_BUILD_ROOT%{_phpostdir}/index.php
 
-gzip -9nf CHANGES README TODO
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc CHANGES README TODO
 %dir %{_phpostdir}
 %attr(770,root,http) %{_phpostdir}/%{name}_cache
 %attr(770,root,http) %{_phpostdir}/%{name}_prefs
