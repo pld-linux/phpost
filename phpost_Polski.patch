@@ -1,88 +1,86 @@
---- phpost_Polski.inc	Mon Jun 11 18:14:16 2001
-+++ phpost_Polski.inc.new	Wed Feb 20 22:42:29 2002
-@@ -1,44 +1,46 @@
- <?
--   // Polish language translation provided by Derk Galon (office@webmax.bc.ca)
--   // * Checked and corrected by Adrian Wieczorek (adi@blink.pl)
--
-    $lang["locale"] = "pl";
--   $lang["charset"] = "ISO-8859-2";
-+   $lang["charset"] = "iso-8859-2";
-    $lang["datefmt"] = "%d-%b-%Y";
+--- phpost_Polski.inc	Sat Oct 20 19:38:45 2001
++++ phpost_Polski.inc.new	Tue Jul  2 00:04:03 2002
+@@ -3,42 +3,47 @@
+    // * Checked and corrected by Adrian Wieczorek (adi@blink.pl)
  
-    $lang["username"] ="U¿ytkownik";
-    $lang["password"] = "Has³o";
--   $lang["popserver"] = "Serwer POP3";
-+   $lang["popserver"] = "POP Server";
+    $vocab["locale"] = "pl";
+-   $vocab["charset"] = "ISO-8859-2";
++   $vocab["charset"] = "iso-8859-2";
+    $vocab["datefmt"] = "%d-%b-%Y";
  
-    $lang["list"] = "Wszystkie";
-    $lang["compose"] = "Nowa wiadomo¶æ";
-    $lang["config"] = "Opcje";
--   $lang["reply"] = "Odpowiedz";
-+   $lang["abook"] = "Ksi±¿ka adresowa";
-+   $lang["reply"] = "Odpowied¼";
-    $lang["forward"] = "Prze¶lij dalej";
--   $lang["previous"] = "Poprzedni";
-+   $lang["previous"] = "Poprzedni"; 
-    $lang["next"] = "Nastêpny";
-    $lang["delete"] = "Usuñ";
-    $lang["login"] = "Zaloguj";
-    $lang["logout"] = "Zakoñcz";
-+   $lang["alias"] = "Alias";
-+   $lang["alist"] = "Lista aliasów";
-+   $lang["aupdate"] = "Dodaj/Zaktualizuj Alias";
-+   $lang["adelete"] = "Usuñ Alias";
+    $vocab["username"] ="U¿ytkownik";
+    $vocab["password"] = "Has³o";
+-   $vocab["popserver"] = "Serwer POP3";
++   $vocab["popserver"] = "POP Server";
  
-    $lang["page"] = "Wybierz stronê";
-    $lang["delmsgs"] = "Usuñ zaznaczone wiadomo¶ci";
--   $lang["total"] = "Masz %d wiadomo¶ci o rozmiarze %s";
-+   $lang["total"] = "Masz %d wiadomo¶(c/ci) o rozmiarze %s";
+    $vocab["list"] = "Wszystkie";
+    $vocab["compose"] = "Nowa wiadomo¶æ";
+    $vocab["config"] = "Opcje";
+-   $vocab["reply"] = "Odpowiedz";
++   $vocab["abook"] = "Ksi±¿ka adresowa";
++   $vocab["reply"] = "Odpowied¼";
+    $vocab["forward"] = "Prze¶lij dalej";
+-   $vocab["previous"] = "Poprzedni";
++   $vocab["previous"] = "Poprzedni"; 
+    $vocab["next"] = "Nastêpny";
+    $vocab["delete"] = "Usuñ";
+    $vocab["login"] = "Zaloguj";
+    $vocab["logout"] = "Zakoñcz";
++   $vocab["alias"] = "Alias";
++   $vocab["alist"] = "Lista aliasów";
++   $vocab["aupdate"] = "Dodaj/Zaktualizuj Alias";
++   $vocab["adelete"] = "Usuñ Alias";
  
--   $lang["number"] = "Lp";
-+   $lang["number"] = "Lp.";
-    $lang["from"] = "Od";
-    $lang["to"] = "Do";
-    $lang["cc"] = "DW";
-    $lang["bcc"] = "UDW";
-    $lang["subject"] = "Temat";
--   $lang["date"] = "Otrzymano";
-+   $lang["date"] = "Data";
-    $lang["size"] = "Rozmiar";
-    $lang["message"] = "Wiadomo¶æ";
-    $lang["send"] = "Wy¶lij wiadomo¶æ";
-    $lang["reset"] = "Zresetuj";
-    $lang["encoding"] = "U¿yj %s by zakodowaæ za³±cznik:";
--   $lang["sendhtml"] = "Wys³aæ wiadomo¶æ w HTML-u?";
--   $lang["ccself"] = "Kopia wiadomo¶ci dla siebie?";
-+   $lang["sendhtml"] = "Wys³aæ jako HTML?";
-+   $lang["ccself"] = "Kopia wiadomo¶ci do siebie?";
+    $vocab["page"] = "Wybierz stronê";
+    $vocab["delmsgs"] = "Usuñ zaznaczone wiadomo¶ci";
+-   $vocab["total"] = "Masz %d wiadomo¶ci o rozmiarze %s";
++   $vocab["total"] = "Masz %d wiadomo¶(c/ci) o rozmiarze %s";
  
-    $lang["showheaders"] = "Poka¿ nag³ówki wiadomo¶ci";
-    $lang["hideheaders"] = "Ukryj nag³ówki wiadomo¶ci";
-@@ -46,19 +48,20 @@
+-   $vocab["number"] = "Lp";
++   $vocab["number"] = "Lp.";
+    $vocab["from"] = "Od";
+    $vocab["to"] = "Do";
+    $vocab["cc"] = "DW";
+    $vocab["bcc"] = "UDW";
+    $vocab["subject"] = "Temat";
+-   $vocab["date"] = "Otrzymano";
++   $vocab["date"] = "Data";
+    $vocab["size"] = "Rozmiar";
+    $vocab["message"] = "Wiadomo¶æ";
+    $vocab["send"] = "Wy¶lij wiadomo¶æ";
+    $vocab["reset"] = "Zresetuj";
+    $vocab["encoding"] = "U¿yj %s by zakodowaæ za³±cznik:";
+-   $vocab["sendhtml"] = "Wys³aæ wiadomo¶æ w HTML-u?";
+-   $vocab["ccself"] = "Kopia wiadomo¶ci dla siebie?";
++   $vocab["sendhtml"] = "Wys³aæ jako HTML?";
++   $vocab["ccself"] = "Kopia wiadomo¶ci do siebie?";
  
-    $lang["fullname"] = "Imiê i nazwisko";
-    $lang["replyaddress"] = "Adres zwrotny (Reply-To)";
--   $lang["signature"] = "Twój Podpis (do³±czany do ka¿dej wiadomo¶ci)";
-+   $lang["signature"] = "Twój podpis (do³±czany do ka¿dej wiadomo¶ci)";
-    $lang["language"] = "Jêzyk";
-    $lang["maxattachments"] = "Max. liczba za³±czników";
-    $lang["pagelength"] = "Ilo¶æ wiadomo¶ci na stronie";
--   $lang["renderhtml"] = "Wy¶wietl wiadomo¶ci w HTML";
--   $lang["renderimages"] = "Poka¿ za³±czon± grafikê w tek¶cie wiadomo¶ci";
-+   $lang["renderhtml"] = "Wy¶wietl wiadomo¶ci w HTMLu";
-+   $lang["renderimages"] = "Poka¿ zal±czon± grafikê w tek¶cie wiadomo¶ci";
-    $lang["saveconfig"] = "  Zapisz zmiany  ";
+    $vocab["showheaders"] = "Poka¿ nag³ówki wiadomo¶ci";
+    $vocab["hideheaders"] = "Ukryj nag³ówki wiadomo¶ci";
+@@ -46,19 +51,20 @@
  
-    $lang["empty"] = "Skrzynka odbiorcza jest pusta";
-    $lang["configsaved"] = "Opcje zosta³y zapisane pomy¶lnie!";
-    $lang["messagesent"] = "Wiadomo¶æ zosta³a wys³ana pomy¶lnie!";
-    $lang["nodelete"] = "Status skrzynki zosta³ zmieniony, ale wiadomo¶æ nie zosta³a usuniêta!";
--   $lang["deletedmsgs"] = "%d wiadomo¶ci zosta³o usuniêtych pomy¶lnie!";
--   $lang["error"] = "B³±d: %s!";
--   $lang["mimecomment"] = "Wiadomo¶c zosta³a zakodowana w formacie MIME. Twój program pocztowy nie rozpozna³ tego formatu - czê¶æ lub ca³o¶æ wiadomo¶ci mo¿e zostaæ wy¶wietlona nieprawid³owo";
-+   $lang["deletedmsgs"] = "%d wiadomo¶(æ/ci) zosta³o usuniêtych pomy¶lnie!";
-+   $lang["error"] = "B³±d: %s";
+    $vocab["fullname"] = "Imiê i nazwisko";
+    $vocab["replyaddress"] = "Adres zwrotny (Reply-To)";
+-   $vocab["signature"] = "Twój Podpis (do³±czany do ka¿dej wiadomo¶ci)";
++   $vocab["signature"] = "Twój podpis (do³±czany do ka¿dej wiadomo¶ci)";
+    $vocab["language"] = "Jêzyk";
+    $vocab["maxattachments"] = "Max. liczba za³±czników";
+    $vocab["pagelength"] = "Ilo¶æ wiadomo¶ci na stronie";
+-   $vocab["renderhtml"] = "Wy¶wietl wiadomo¶ci w HTML";
+-   $vocab["renderimages"] = "Poka¿ za³±czon± grafikê w tek¶cie wiadomo¶ci";
++   $vocab["renderhtml"] = "Wy¶wietl wiadomo¶ci w HTMLu";
++   $vocab["renderimages"] = "Poka¿ zal±czon± grafikê w tek¶cie wiadomo¶ci";
 +
-+   $lang["mimecomment"] = "Wiadomo¶c zosta³a zakodowana w formacie MIME. Twój program pocztowy nie rozozna³ tego formatu - czê¶æ lub ca³o¶æ wiadomo¶ci mo¿e zostaæ wy¶wietlona nieprawid³owo";
+    $vocab["saveconfig"] = "  Zapisz zmiany  ";
+ 
+    $vocab["empty"] = "Skrzynka odbiorcza jest pusta";
+    $vocab["configsaved"] = "Opcje zosta³y zapisane pomy¶lnie!";
+    $vocab["messagesent"] = "Wiadomo¶æ zosta³a wys³ana pomy¶lnie!";
+    $vocab["nodelete"] = "Status skrzynki zosta³ zmieniony, ale wiadomo¶æ nie zosta³a usuniêta!";
+-   $vocab["deletedmsgs"] = "%d wiadomo¶ci zosta³o usuniêtych pomy¶lnie!";
+-   $vocab["error"] = "B³±d: %s!";
+-   $vocab["mimecomment"] = "Wiadomo¶c zosta³a zakodowana w formacie MIME. Twój program pocztowy nie rozpozna³ tego formatu - czê¶æ lub ca³o¶æ wiadomo¶ci mo¿e zostaæ wy¶wietlona nieprawid³owo";
++   $vocab["deletedmsgs"] = "%d wiadomo¶(æ/ci) zosta³o usuniêtych pomy¶lnie!";
++   $vocab["error"] = "B³±d: %s";
++   $vocab["mimecomment"] = "Wiadomo¶c zosta³a zakodowana w formacie MIME. Twój program pocztowy nie rozpozna³ tego formatu - czê¶æ lub ca³o¶æ wiadomo¶ci mo¿e zostaæ wy¶wietlona nieprawid³owo";
  ?>
