@@ -5,9 +5,9 @@ Version:	1.10
 Release:	1.beta
 License:	GPL
 Group:		Networking/Utilities
-Source0:	http://webgadgets.com/phpost/%{name}.tar.gz
+Source0:	http://webgadgets.com/%{name}/phpost.tar.gz
 # Source0-md5:	a5cbec332c1d55296d0b84f48e9715b5
-Source1:        %{name}.conf
+Source1:	%{name}.conf
 Patch0:		%{name}_Polski.patch
 Requires:	php
 Requires:	php-pcre
@@ -84,8 +84,8 @@ fi
 %defattr(644,root,root,755)
 %doc CHANGES README TODO
 %dir %{_sysconfdir}
-%attr(640,root,http) %config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/*
-%config(noreplace) %verify(not size mtime md5) /etc/httpd/%{name}.conf
+%attr(640,root,http) %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/*
+%config(noreplace) %verify(not md5 mtime size) /etc/httpd/%{name}.conf
 %dir %{_phpostdir}
 %attr(770,root,http) %{_phpostdir}/%{name}_cache
 %attr(770,root,http) %{_phpostdir}/%{name}_prefs
