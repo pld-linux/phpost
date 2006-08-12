@@ -15,8 +15,8 @@ Requires:	php-pear
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_phpostdir      %{_datadir}/%{name}
-%define         _sysconfdir     /etc/%{name}
+%define		_phpostdir	%{_datadir}/%{name}
+%define		_sysconfdir	/etc/%{name}
 
 
 %description
@@ -37,7 +37,7 @@ ze standardowymi serwerami POP oraz SMTP.
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_phpostdir}/%{name}_{cache,prefs,temp} \
-        $RPM_BUILD_ROOT{%{_sysconfdir},/etc/httpd}
+	$RPM_BUILD_ROOT{%{_sysconfdir},/etc/httpd}
 
 install *.{gif,php,css,inc} $RPM_BUILD_ROOT%{_phpostdir}
 install %{name}_cache/.htaccess $RPM_BUILD_ROOT%{_phpostdir}/%{name}_cache/
@@ -56,27 +56,27 @@ rm -rf $RPM_BUILD_ROOT
 
 %post
 if [ -f /etc/httpd/httpd.conf ] && ! grep -q "^Include.*%{name}.conf" /etc/httpd/httpd.conf; then
-        echo "Include /etc/httpd/%{name}.conf" >> /etc/httpd/httpd.conf
+	echo "Include /etc/httpd/%{name}.conf" >> /etc/httpd/httpd.conf
 elif [ -d /etc/httpd/httpd.conf ]; then
-        ln -sf /etc/httpd/%{name}.conf /etc/httpd/httpd.conf/99_%{name}.conf
+	ln -sf /etc/httpd/%{name}.conf /etc/httpd/httpd.conf/99_%{name}.conf
 fi
 if [ -f /var/lock/subsys/httpd ]; then
-        /usr/sbin/apachectl restart 1>&2
+	/usr/sbin/apachectl restart 1>&2
 fi
 
 %preun
 if [ "$1" = "0" ]; then
-        umask 027
-        if [ -d /etc/httpd/httpd.conf ]; then
-                rm -f /etc/httpd/httpd.conf/99_%{name}.conf
-        else
-                grep -v "^Include.*%{name}.conf" /etc/httpd/httpd.conf > \
-                        /etc/httpd/httpd.conf.tmp
-                mv -f /etc/httpd/httpd.conf.tmp /etc/httpd/httpd.conf
-                if [ -f /var/lock/subsys/httpd ]; then
-                        /usr/sbin/apachectl restart 1>&2
-                fi
-        fi
+	umask 027
+	if [ -d /etc/httpd/httpd.conf ]; then
+		rm -f /etc/httpd/httpd.conf/99_%{name}.conf
+	else
+		grep -v "^Include.*%{name}.conf" /etc/httpd/httpd.conf > \
+			/etc/httpd/httpd.conf.tmp
+		mv -f /etc/httpd/httpd.conf.tmp /etc/httpd/httpd.conf
+		if [ -f /var/lock/subsys/httpd ]; then
+			/usr/sbin/apachectl restart 1>&2
+		fi
+	fi
 fi
 
 
