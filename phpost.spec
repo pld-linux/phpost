@@ -1,3 +1,4 @@
+# TODO: webapps?
 Summary:	A web based POP mail client written in PHP4
 Summary(pl):	Klient POP przez WWW, napisany w PHP4
 Name:		phpost
@@ -5,7 +6,7 @@ Version:	1.10
 Release:	1.beta
 License:	GPL
 Group:		Networking/Utilities
-Source0:	http://webgadgets.com/%{name}/phpost.tar.gz
+Source0:	http://webgadgets.com/phpost/phpost.tar.gz
 # Source0-md5:	a5cbec332c1d55296d0b84f48e9715b5
 Source1:	%{name}.conf
 Patch0:		%{name}_Polski.patch
@@ -17,7 +18,6 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_phpostdir	%{_datadir}/%{name}
 %define		_sysconfdir	/etc/%{name}
-
 
 %description
 PHPost is a free PHP4 program that implements a POP mail client. It is
@@ -40,8 +40,8 @@ install -d $RPM_BUILD_ROOT%{_phpostdir}/%{name}_{cache,prefs,temp} \
 	$RPM_BUILD_ROOT{%{_sysconfdir},/etc/httpd}
 
 install *.{gif,php,css,inc} $RPM_BUILD_ROOT%{_phpostdir}
-install %{name}_cache/.htaccess $RPM_BUILD_ROOT%{_phpostdir}/%{name}_cache/
-install %{name}_prefs/.htaccess $RPM_BUILD_ROOT%{_phpostdir}/%{name}_prefs/
+install %{name}_cache/.htaccess $RPM_BUILD_ROOT%{_phpostdir}/%{name}_cache
+install %{name}_prefs/.htaccess $RPM_BUILD_ROOT%{_phpostdir}/%{name}_prefs
 rm -f $RPM_BUILD_ROOT%{_phpostdir}/phpost.inc.php
 
 cp phpost.inc.php $RPM_BUILD_ROOT%{_sysconfdir}
@@ -78,7 +78,6 @@ if [ "$1" = "0" ]; then
 		fi
 	fi
 fi
-
 
 %files
 %defattr(644,root,root,755)
