@@ -11,7 +11,6 @@ Source0:	http://webgadgets.com/%{name}/phpost.tar.gz
 Source1:	%{name}.conf
 Patch0:		%{name}_Polski.patch
 Requires:	php(pcre)
-Requires:	php-pear
 Requires:	webserver(php)
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
