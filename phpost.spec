@@ -6,13 +6,13 @@ Version:	1.10
 Release:	1.beta
 License:	GPL
 Group:		Networking/Utilities
-Source0:	http://webgadgets.com/phpost/phpost.tar.gz
+Source0:	http://webgadgets.com/%{name}/phpost.tar.gz
 # Source0-md5:	a5cbec332c1d55296d0b84f48e9715b5
 Source1:	%{name}.conf
 Patch0:		%{name}_Polski.patch
-Requires:	php
-Requires:	php-pcre
+Requires:	php(pcre)
 Requires:	php-pear
+Requires:	webserver(php)
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
