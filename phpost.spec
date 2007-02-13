@@ -1,6 +1,6 @@
 # TODO: webapps?
 Summary:	A web based POP mail client written in PHP4
-Summary(pl.UTF-8):   Klient POP przez WWW, napisany w PHP4
+Summary(pl.UTF-8):	Klient POP przez WWW, napisany w PHP4
 Name:		phpost
 Version:	1.10
 Release:	1.beta
