@@ -31,7 +31,7 @@ ze standardowymi serwerami POP oraz SMTP.
 
 %prep
 %setup -q -c
-#%patch0 -p0
+#%%patch0 -p0
 
 %install
 rm -rf $RPM_BUILD_ROOT
